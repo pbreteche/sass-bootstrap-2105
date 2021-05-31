@@ -6,5 +6,8 @@ h1 {
 }
 
 table {
+    /* variable shadowing */
+    /* masque la déclaration ligne 1 au sein de ce bloc */
+    $brand-color: #5d3; 
     border: 2px solid $brand-color;
 }

@@ -1,0 +1,10 @@
+$brand-color: #d35;
+
+h1 {
+    color: $brand-color;
+    font-family: 'Lucida Sans', sans-serif;
+}
+
+table {
+    border: 2px solid $brand-color;
+}

@@ -1,8 +1,11 @@
 $brand-color: #d35;
 
 h1 {
+    // attention / peut être aussi bien la division
+    // l'utilisation de l'opérateur est dépréciée et remplacée par math.div()
+    // nb les commentaires "//" sont supprimés à la compilation
+    font: 2em / 2 'Lucida Sans', sans-serif;
     color: $brand-color;
-    font-family: 'Lucida Sans', sans-serif;
 }
 
 table {

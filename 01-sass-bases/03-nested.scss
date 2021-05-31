@@ -1,22 +1,26 @@
+$dark-color: #222;
+$light-color: #ddd;
+$brand-color: #5a5;
+
 
 table.report-data {
-    color: #222;
+    color: $dark-color;
 
     // une règle imbriquée applique la relation d'ascendance
     th {
-        background-color: #222;
-        color: #ddd;
+        background-color: $dark-color;
+        color: $light-color;
     }
 
     td {
-        color: #444;
+        color: lighten($dark-color, 20);
 
         a {
             display: block;
-            background-color: #5a5;
+            background-color: $brand-color;
 
             &:hover {
-                background-color: lighten($color: #5a5, $amount: 20);
+                background-color: lighten($color: $brand-color, $amount: 20);
             }
         }
     }

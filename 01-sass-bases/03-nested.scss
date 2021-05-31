@@ -1,0 +1,23 @@
+
+table.report-data {
+    color: #222;
+
+    // une règle imbriquée applique la relation d'ascendance
+    th {
+        background-color: #222;
+        color: #ddd;
+    }
+
+    td {
+        color: #444;
+
+        a {
+            display: block;
+            background-color: #5a5;
+
+            &:hover {
+                background-color: lighten($color: #5a5, $amount: 20);
+            }
+        }
+    }
+}

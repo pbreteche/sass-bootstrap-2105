@@ -1,3 +1,5 @@
+@use "sass:list";
+
 @mixin bordered($width: 1px, $color: $black-color) {
     border: $width solid $color;
 }
@@ -5,5 +7,11 @@
 @mixin diet-color($diet, $color) {
     &.diet-#{$diet} {
         color: $color;
+    }
+}
+
+@mixin media-query($media-index: 1) {
+    @media(min-width: list.nth($breakpoints, $media-index)) {
+        @content;
     }
 }

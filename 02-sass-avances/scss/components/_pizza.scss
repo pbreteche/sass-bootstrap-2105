@@ -1,15 +1,7 @@
 .pizza {
     @include bordered;
     
-    &.diet-vege {
-        color: darkgreen;
-    }
-
-    &.diet-ham {
-        color: darkred;
-    }
-
-    &.diet-fish {
-        color: darkblue;
-    }
+    @include diet-color(vege, darkgreen);
+    @include diet-color(ham, darkred);
+    @include diet-color(fish, darkblue);
 }

@@ -1,0 +1,27 @@
+// Barre principale de navigation
+
+.main-menu {
+    background-color: $green-color;
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    a {
+        text-decoration: none;
+        display: block;
+        padding: .25em .5em;
+        border: 1px solid #333;
+        background-color: $white-color;
+        color: $red-color;
+        margin: .25em;
+
+        &:hover {
+            background-color: $red-color;
+            color: $white-color;
+        }
+    }
+}

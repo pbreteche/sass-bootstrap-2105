@@ -9,11 +9,19 @@
         padding-left: 0;
         display: flex;
         align-items: flex-start;
+        flex-wrap: wrap;
+        @media(min-width: list.nth($breakpoints, 1)) {
+            flex-wrap: nowrap;
+        }
     }
 
-    @media(min-width: list.nth($breakpoints, 2)) {
-        li {
+    li {
+        flex: 100%;
+        @media(min-width: list.nth($breakpoints, 1)) {
             flex: 1 0 auto;
+        }
+        @media(min-width: list.nth($breakpoints, 2)) {
+            flex: 0 1 auto;
         }
     }
 

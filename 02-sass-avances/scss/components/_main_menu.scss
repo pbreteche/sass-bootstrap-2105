@@ -11,10 +11,10 @@
     }
 
     a {
+        @extend %bordered;
         text-decoration: none;
         display: block;
         padding: .25em .5em;
-        border: 1px solid #333;
         background-color: $white-color;
         color: $red-color;
         margin: .25em;

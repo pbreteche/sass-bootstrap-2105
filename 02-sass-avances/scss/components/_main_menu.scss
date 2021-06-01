@@ -11,7 +11,7 @@
     }
 
     a {
-        @extend %bordered;
+        @include bordered;
         text-decoration: none;
         display: block;
         padding: .25em .5em;

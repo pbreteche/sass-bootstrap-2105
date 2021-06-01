@@ -1,7 +1,9 @@
 .pizza {
     @include bordered;
     
-    @include diet-color(vege, darkgreen);
-    @include diet-color(ham, darkred);
-    @include diet-color(fish, darkblue);
+    // parcours les éléments d'une collection
+    // list ou mapping
+    @each $diet, $color in $diets {
+        @include diet-color($diet, $color);
+    }
 }

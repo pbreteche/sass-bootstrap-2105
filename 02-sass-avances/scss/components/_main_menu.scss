@@ -1,4 +1,5 @@
 // Barre principale de navigation
+@use "sass:list";
 
 .main-menu {
     background-color: $green-color;
@@ -8,6 +9,12 @@
         padding-left: 0;
         display: flex;
         align-items: flex-start;
+    }
+
+    @media(min-width: list.nth($breakpoints, 2)) {
+        li {
+            flex: 1 0 auto;
+        }
     }
 
     a {

@@ -1,0 +1,7 @@
+@use "sass:color";
+
+@function complementary($color) {
+    $hue: color.hue($color) + 180;
+
+    @return color.change($color, $hue:$hue);
+}

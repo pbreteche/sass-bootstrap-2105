@@ -10,6 +10,8 @@ $.noConflict(); // rend l'alias "$" à sa valeur origine au niveau global
 // IIFE redéfinit "$" localement
 (function($){
     $(function() {
+        // C'est ici que commence réellement notre code
+
         // chargement d'une collection d'élément / sélecteur jQuery
         // sélecteur jQuery ~ sélecteur HTML + qq bonus
         $('h1:contains(démo)')
@@ -17,5 +19,11 @@ $.noConflict(); // rend l'alias "$" à sa valeur origine au niveau global
         .css({ 
             color: 'red',
         });
+
+        // La sélection d'éléments est couteuse
+        //   * conserver une sélection dans une variable
+        //     par convention préfixer le nom de variable avec "$"
+        //   * transformer une sélection à partir d'une autre
+
     }); 
 })(jQuery);

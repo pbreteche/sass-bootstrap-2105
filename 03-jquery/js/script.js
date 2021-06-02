@@ -4,15 +4,18 @@
 // exemple: si une fonction est appelée en tant que fonction,
 //     this vaut undefined au lieu de l'objet global
 
-$(document).ready(function() {
-    console.log(this);
-});
+// cohabitation entre jQuery et d'autres lib
+$.noConflict(); // rend l'alias "$" à sa valeur origine au niveau global
 
-// équivalent à :
-$(function() {
-
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-
-});
+// IIFE redéfinit "$" localement
+(function($){
+    $(function() {
+        // chargement d'une collection d'élément / sélecteur jQuery
+        // sélecteur jQuery ~ sélecteur HTML + qq bonus
+        $('h1:contains(démo)')
+        // applique un traitement à tous les éléments de la collection
+        .css({ 
+            color: 'red',
+        });
+    }); 
+})(jQuery);

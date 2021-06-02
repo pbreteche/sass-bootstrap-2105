@@ -1,6 +1,6 @@
 // Barre principale de navigation
 .main-menu {
-    background-color: $green-color;
+    background-color: custom.complementary($green-color);
 
     ul {
         list-style-type: none;

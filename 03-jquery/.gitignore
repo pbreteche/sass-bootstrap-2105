@@ -1,0 +1,9 @@
+# external dependencies
+node_modules/
+
+# media & binary files
+
+# generated content: build, log, cache, etc.
+
+# environment dependent content, sensitive info (password)
+

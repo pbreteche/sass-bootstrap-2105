@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jQuery démo</title>
+    <style>
+        .menu {
+            display: flex;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        #my-app--gallery > ul {
+            display: flex;
+            padding: 0;
+            list-style-type: none;
+        }
+        #my-app--gallery img {
+            height: 4em;
+        }
+    </style>
 </head>
 <body>
     <h1>jQuery démo</h1>
@@ -41,6 +57,7 @@
 
     <div id="my-app--gallery" class="gallery"></div>
 
+    <div id="actus"></div>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="js/script.js"></script>
 </body>

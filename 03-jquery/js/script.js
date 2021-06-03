@@ -56,6 +56,8 @@ $.noConflict(); // rend l'alias "$" à sa valeur origine au niveau global
                     );
                 })
             ).appendTo($gallery);
-        })
+        });
+
+        $('#actus').load('api/news.html');
     });
 })(jQuery);

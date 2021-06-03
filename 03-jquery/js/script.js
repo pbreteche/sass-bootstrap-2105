@@ -46,8 +46,15 @@ $.noConflict(); // rend l'alias "$" à sa valeur origine au niveau global
         ;
 
         // second Atelier: liste d'images
-        $('<img>').prop('src', `images/${IMAGES[0]}`)
-                .appendTo($gallery);
+        const $gallery = $('#my-app--gallery');
+
+        $('<ul>').append(
+            IMAGES.map(path => {
+                return $('<li>').append(
+                    $('<img>').prop('src', `images/${path}`)
+                );
+            })
+        ).appendTo($gallery);
         
     }); 
 })(jQuery);

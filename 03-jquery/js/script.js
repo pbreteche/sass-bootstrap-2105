@@ -59,5 +59,16 @@ $.noConflict(); // rend l'alias "$" à sa valeur origine au niveau global
         });
 
         $('#actus').load('api/news.html');
+
+        $('#my-app--comments-book').submit(function(e) {
+            e.preventDefault();
+            $.post({
+                url: 'fake-url',
+                data: JSON.stringify($(this).serializeArray()),
+                contentType: 'application/json'
+            }).done(function() {
+                // do something
+            })
+        });
     });
 })(jQuery);

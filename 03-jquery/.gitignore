@@ -2,6 +2,7 @@
 node_modules/
 
 # media & binary files
+images/
 
 # generated content: build, log, cache, etc.
 

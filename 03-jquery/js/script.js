@@ -44,5 +44,10 @@ $.noConflict(); // rend l'alias "$" à sa valeur origine au niveau global
                     $(this).next().toggle();
                 })
         ;
+
+        // second Atelier: liste d'images
+        $('<img>').prop('src', `images/${IMAGES[0]}`)
+                .appendTo($gallery);
+        
     }); 
 })(jQuery);

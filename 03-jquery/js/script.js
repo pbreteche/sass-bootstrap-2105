@@ -24,6 +24,25 @@ $.noConflict(); // rend l'alias "$" à sa valeur origine au niveau global
         //   * conserver une sélection dans une variable
         //     par convention préfixer le nom de variable avec "$"
         //   * transformer une sélection à partir d'une autre
+        const $menu = $('.menu');
 
+        $menu.find('ul') // recherche parmi les descendants; modifie la sélection d'élément (querySelectorAll)
+                .hide() // masque les éléments via la propriété display (.style.display ou hidden)
+                .prev() // décalle la sélection sur chacun de prédécesseurs (previousElementSibling)
+                .click(function() {
+                    // this est déterminé par le gesttionnaire d'événement du DOM
+                    // c'est l'élément sur lequel est posé l'écouteur
+                    // ce n'est pas une collection jQuery
+
+                    // masque tous les autres sous-menus
+                    $(this).parent()
+                            .siblings()
+                            .children('ul') // filtre les enfants de type <ul>
+                            .hide();
+
+                    // bascule l'affichage du sous-menu correspondant        
+                    $(this).next().toggle();
+                })
+        ;
     }); 
 })(jQuery);

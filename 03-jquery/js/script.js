@@ -48,13 +48,14 @@ $.noConflict(); // rend l'alias "$" à sa valeur origine au niveau global
         // second Atelier: liste d'images
         const $gallery = $('#my-app--gallery');
 
-        $('<ul>').append(
-            IMAGES.map(path => {
-                return $('<li>').append(
-                    $('<img>').prop('src', `images/${path}`)
-                );
-            })
-        ).appendTo($gallery);
-        
-    }); 
+        $.get('api/images.json').then(data => {
+            $('<ul>').append(
+                data.map(path => {
+                    return $('<li>').append(
+                        $('<img>').prop('src', `images/${path}`)
+                    );
+                })
+            ).appendTo($gallery);
+        })
+    });
 })(jQuery);

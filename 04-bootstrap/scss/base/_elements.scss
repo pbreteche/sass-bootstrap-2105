@@ -1,0 +1,10 @@
+h1 {
+    @extend .bg-primary;
+    @extend .text-white;
+}
+
+kbd {
+    @extend .bg-dark;
+    @extend .text-light;
+}
+

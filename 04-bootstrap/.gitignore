@@ -1,1 +1,5 @@
+# vendor directory
 node_modules/
+
+# build directory
+css/

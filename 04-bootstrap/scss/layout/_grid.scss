@@ -1,0 +1,26 @@
+body {
+    @extend .container-fluid;
+}
+
+.wrapper {
+    @extend .row;
+
+    aside {
+        @extend .col-sm;
+        &.aside-1 {
+            @extend .order-lg-1;
+        }
+        &.aside-2 {
+            @extend .order-lg-3;
+        }
+    }
+
+    .main {
+        @extend .col-lg-6;
+        @extend .order-lg-2;
+    }
+
+    .footer {
+        @extend .order-lg-last;
+    }
+}
